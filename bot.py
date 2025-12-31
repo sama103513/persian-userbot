@@ -8,8 +8,9 @@ from pyrogram import Client, filters
 # دریافت اطلاعات حساس از Environment Variables (ایمن)
 # ---------------------------------------------------------
 # در Railway این دو را به صورت متغیر وارد می‌کنیم
-API_ID = int(os.environ.get("31586956"))
-API_HASH = os.environ.get("f36c0753be9379b0f40d9a6c9077e10e")
+# نام متغیر باید دقیقاً با نامی که در Railway ست کردید یکی باشد (با حروف بزرگ)
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
 
 # ---------------------------------------------------------
 # ایجاد کلاینت
@@ -45,4 +46,5 @@ async def add_footer(client, message):
         print(f"Error editing message: {e}")
 
 print("یوزر بات با موفقیت اجرا شد...")
+
 app.run()
